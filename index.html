@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> WelCome to Orbiko</title>
+    <link rel="icon" type="image/x-icon" href="images/Cart_icon.png" />
+
+    <!-- Bootstrap 4.6 & Icons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Custom CSS (Separated) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- ================= HEADER BANNER ================= -->
+      <div class="myBanner">
+        <div class="header-brand-container">
+          <div class="header-logo-badge">
+            <img
+              src="images/logo.png"
+              alt="Orbiko Logo"
+              class="header-logo-img"
+            />
+          </div>
+          <div class="header-title-group">
+            <h1 class="header-brand-title">Orbiko</h1>
+            <p class="header-brand-subtitle">Best Deals &amp; Quality Products</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= NAVBAR ================= -->
+      <nav class="navbar bg-primary navbar-expand-md navbar-dark sticky-top">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          
+          data-target="#collapsibleNavBar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="collapsibleNavBar"
+        >
+          <a class="navbar-brand font-weight-bold" href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top">
+            Orbiko
+          </a>
+          <ul class="navbar-nav" id="navMenu"></ul>
+        </div>
+      </nav>
+
+      <!-- ================= CAROUSEL ================= -->
+      <div class="myRow">
+        <div
+          id="demo"
+          class="carousel slide"
+          data-ride="carousel"
+          data-interval="5000"
+          data-pause="hover"
+        >
+          <ul class="carousel-indicators" id="carouselIndicators"></ul>
+          <div class="carousel-inner" id="carouselInner"></div>
+
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ================= PRODUCTS BELOW CAROUSEL ================= -->
+      <div id="productsBelow" style="display: none;">
+        <div class="carousel-grid" id="productsGrid"></div>
+        <div class="category-title" id="productsCategoryTitle"></div>
+      </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <div id="footer">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Orbiko Logo" class="footer-logo-img" />
+        <span class="footer-brand-name">Orbiko</span>
+      </div>
+      <div id="myMail" class="d-flex align-items-center flex-wrap" style="gap: 10px;">
+        <span>Mail: Orbiko@gmail.com</span>
+        <a href="javascript:void(0)" onclick="openCookieModal()" class="footer-cookie-link" title="Cookie & Privacy Settings">
+          <i class="bi bi-cookie"></i> Cookie Settings
+        </a>
+      </div>
+    </div>
+
+    <!-- ================= BUY NOW / CHECKOUT MODAL ================= -->
+    <div
+      class="modal fade"
+      id="buyNowModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="buyNowModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div
+          class="modal-content"
+          style="border-radius: 12px; overflow: hidden; border: 2px solid #ff5722;"
+        >
+          <div
+            class="modal-header"
+            style="background: linear-gradient(135deg, #a0e687, #40d928); color: white;"
+          >
+            <h5 class="modal-title font-weight-bold" id="buyNowModalLabel">
+              <i class="bi bi-bag-check-fill mr-2"></i> Instant Buy &amp; Checkout
+            </h5>
+            <button
+              type="button"
+              class="close text-white"
+              data-dismiss="modal"
+              aria-label="Close"
+              style="opacity: 0.9;"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-4">
+            <!-- Product Preview -->
+            <div
+              class="d-flex align-items-center mb-3 p-2 rounded"
+              style="background-color: #f8f9fa; border: 1px solid #e9ecef;"
+            >
+              <img
+                id="buyModalImg"
+                src=""
+                alt="Product"
+                style="width: 70px; height: 70px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; margin-right: 15px;"
+              />
+              <div style="flex: 1;">
+                <h6
+                  id="buyModalTitle"
+                  class="font-weight-bold mb-1"
+                  style="color: #222;"
+                ></h6>
+                <div class="d-flex align-items-center mb-1">
+                  <span
+                    id="buyModalPrice"
+                    class="font-weight-bold text-dark mr-2"
+                    style="font-size: 16px;"
+                  ></span>
+                  <span
+                    id="buyModalOriginalPrice"
+                    class="text-muted mr-2"
+                    style="text-decoration: line-through; font-size: 13px;"
+                  ></span>
+                  <span
+                    id="buyModalDiscount"
+                    class="badge badge-success font-weight-bold"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quantity Selector -->
+            <div
+              class="d-flex align-items-center justify-content-between mb-3 p-2 rounded"
+              style="background-color: #fff; border: 1px solid #e9ecef;"
+            >
+              <span class="font-weight-bold text-secondary">Quantity:</span>
+              <div class="input-group" style="width: 120px;">
+                <div class="input-group-prepend">
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    type="button"
+                    onclick="changeBuyQty(-1)"
+                  >
+                    -
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  id="buyModalQty"
+                  class="form-control form-control-sm text-center font-weight-bold"
+                  value="1"
+                  readonly
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    type="button"
+                    onclick="changeBuyQty(1)"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Delivery & Details Form -->
+            <form id="buyNowForm" onsubmit="confirmOrder(event)">
+              <div class="form-group mb-2">
+                <label
+                  for="buyCustomerName"
+                  class="small font-weight-bold text-muted mb-1"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="buyCustomerName"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+              <div class="form-group mb-2">
+                <label
+                  for="buyCustomerPhone"
+                  class="small font-weight-bold text-muted mb-1"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  class="form-control form-control-sm"
+                  id="buyCustomerPhone"
+                  placeholder="Enter 10-digit mobile number"
+                  pattern="[0-9]{10}"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label
+                  for="buyCustomerAddress"
+                  class="small font-weight-bold text-muted mb-1"
+                  >Delivery Address</label
+                >
+                <textarea
+                  class="form-control form-control-sm"
+                  id="buyCustomerAddress"
+                  rows="2"
+                  placeholder="House/Flat No, Street, City, PIN"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Payment Method Selection -->
+              <div class="mb-3">
+                <label class="small font-weight-bold text-muted mb-1 d-block"
+                  >Payment Method</label
+                >
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="payCOD"
+                    name="paymentMethod"
+                    class="custom-control-input"
+                    value="Cash on Delivery"
+                    checked
+                  />
+                  <label class="custom-control-label small" for="payCOD"
+                    >Cash on Delivery</label
+                  >
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="payUPI"
+                    name="paymentMethod"
+                    class="custom-control-input"
+                    value="UPI / GPay"
+                  />
+                  <label class="custom-control-label small" for="payUPI"
+                    >UPI / GPay</label
+                  >
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input
+                    type="radio"
+                    id="payCard"
+                    name="paymentMethod"
+                    class="custom-control-input"
+                    value="Credit / Debit Card"
+                  />
+                  <label class="custom-control-label small" for="payCard"
+                    >Card</label
+                  >
+                </div>
+              </div>
+
+              <!-- Price Summary -->
+              <div
+                class="p-2 rounded mb-3"
+                style="background-color: #fff9e6; border: 1px dashed #ffa000;"
+              >
+                <div class="d-flex justify-content-between small text-muted mb-1">
+                  <span>Item Total:</span>
+                  <span id="buySummaryItemTotal">₹0</span>
+                </div>
+                <div class="d-flex justify-content-between small text-muted mb-1">
+                  <span>Delivery Charges:</span>
+                  <span class="text-success font-weight-bold">FREE</span>
+                </div>
+                <hr class="my-1" />
+                <div
+                  class="d-flex justify-content-between font-weight-bold"
+                  style="font-size: 15px; color: #222;"
+                >
+                  <span>Total Payable:</span>
+                  <span id="buySummaryGrandTotal" class="text-danger">₹0</span>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm mr-2"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-success btn-sm font-weight-bold px-4"
+                  style="background-color: #28a745; border-color: #28a745;"
+                >
+                  <i class="bi bi-check-circle-fill mr-1"></i> Place Order
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= ORDER SUCCESS MODAL ================= -->
+    <div
+      class="modal fade"
+      id="orderSuccessModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div
+          class="modal-content text-center p-4"
+          style="border-radius: 12px; border: 2px solid #28a745;"
+        >
+          <div class="modal-body">
+            <div class="mb-3">
+              <i
+                class="bi bi-check-circle-fill text-success"
+                style="font-size: 3.5rem;"
+              ></i>
+            </div>
+            <h4 class="font-weight-bold text-success mb-2">Order Confirmed!</h4>
+            <p class="text-muted mb-3" id="successOrderMessage">
+              Thank you for your purchase.
+            </p>
+            <div
+              class="p-3 rounded mb-3"
+              style="background-color: #f8f9fa; border: 1px solid #e9ecef; text-align: left;"
+              id="successOrderDetails"
+            ></div>
+            <button
+              type="button"
+              class="btn btn-primary px-4 font-weight-bold"
+              data-dismiss="modal"
+            >
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= RIGHT-SIDE CORNER CART SMALL WINDOW POPUP ================= -->
+    <div id="rightCornerCartWindow" class="right-corner-cart-window" role="dialog" aria-labelledby="cartWindowHeading">
+      <!-- Window Header -->
+      <div class="cart-window-header">
+        <div class="d-flex align-items-center">
+          <div class="cart-window-icon-badge mr-2">
+            <i class="bi bi-cart3"></i>
+          </div>
+          <div>
+            <h6 id="cartWindowHeading" class="cart-window-title mb-0">Shopping Cart</h6>
+            <small class="cart-window-subtitle" id="cartWindowSubtext">0 Items</small>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="cart-window-close-btn"
+          onclick="closeCartWindow()"
+          title="Close Cart Window"
+          aria-label="Close"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <!-- Window Scrollable Body -->
+      <div class="cart-window-body">
+        <div id="cartItemsContainer"></div>
+      </div>
+
+      <!-- Window Footer -->
+      <div id="cartFooterSection" class="cart-window-footer d-none">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <button
+            type="button"
+            class="btn btn-outline-danger btn-xs py-1 px-2 font-weight-bold"
+            onclick="clearCart(event)"
+            style="font-size: 11px; border-radius: 4px;"
+          >
+            <i class="bi bi-trash mr-1"></i> Clear Cart
+          </button>
+          <div class="text-right">
+            <span class="text-muted small mr-1">Total:</span>
+            <span id="cartModalTotal" class="font-weight-bold text-dark h6 mb-0">₹0</span>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="cartCheckoutBtn"
+          class="btn btn-success btn-block font-weight-bold py-2 shadow-sm"
+          onclick="checkoutCart()"
+          style="background: linear-gradient(135deg, #28a745, #218838); border: none; font-size: 13.5px; border-radius: 8px;"
+        >
+          <i class="bi bi-bag-check-fill mr-1"></i> Proceed to Buy (All Items)
+        </button>
+      </div>
+    </div>
+
+
+
+    <!-- ================= FLOATING COOKIE BUTTON ================= -->
+    <button
+      id="floatingCookieBtn"
+      class="floating-cookie-btn"
+      onclick="openCookieModal()"
+      title="Cookie Settings & Privacy"
+      aria-label="Manage Cookies"
+    >
+      <i class="bi bi-cookie"></i>
+      <span class="cookie-btn-label">Cookies</span>
+    </button>
+
+    <!-- ================= COOKIE CONSENT CENTER POPUP MODAL ================= -->
+    <div id="cookieConsentOverlay" class="cookie-popup-overlay">
+      <div
+        id="cookieConsentPopup"
+        class="cookie-popup-card"
+        role="dialog"
+        aria-labelledby="cookiePopupTitle"
+        aria-describedby="cookiePopupDesc"
+      >
+        <button
+          type="button"
+          class="cookie-popup-close"
+          onclick="closeCookiePopup()"
+          title="Dismiss"
+          aria-label="Close"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+
+        <div class="cookie-popup-header text-center">
+          <div class="cookie-popup-icon-badge">
+            <span class="cookie-emoji">🍪</span>
+          </div>
+          <h4 id="cookiePopupTitle" class="cookie-popup-title font-weight-bold mt-3 mb-1 text-dark">
+            We Use Cookies!
+          </h4>
+          <p id="cookiePopupDesc" class="cookie-popup-subtitle text-muted small mb-3">
+            Orbiko uses cookies to remember your shopping cart, resume exactly where you left off, and enhance your shopping journey.
+          </p>
+        </div>
+
+        <div class="cookie-features-box mb-3">
+          <div class="cookie-feature-item">
+            <i class="bi bi-geo-alt-fill text-primary" style="font-size: 1.2rem;"></i>
+            <div>
+              <strong class="text-dark">Resume Where You Left Off (3 Mins):</strong>
+              <small class="text-muted d-block">Reopen this site within 3 minutes to jump right back to your position. After 3 mins, starts fresh.</small>
+            </div>
+          </div>
+          <div class="cookie-feature-item">
+            <i class="bi bi-cart-check-fill text-success" style="font-size: 1.2rem;"></i>
+            <div>
+              <strong class="text-dark">Persistent Shopping Cart:</strong>
+              <small class="text-muted d-block">Items added to your cart remain saved even after you close the browser.</small>
+            </div>
+          </div>
+          <div class="cookie-feature-item">
+            <i class="bi bi-shield-check text-warning" style="font-size: 1.2rem;"></i>
+            <div>
+              <strong class="text-dark">Privacy &amp; Control:</strong>
+              <small class="text-muted d-block">You can change your cookie preferences or clear them at any time.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="cookie-popup-actions">
+          <button
+            type="button"
+            class="btn btn-primary btn-block font-weight-bold py-2 cookie-btn-primary"
+            onclick="acceptAllCookies()"
+          >
+            <i class="bi bi-check-circle-fill mr-1"></i> Accept All &amp; Continue
+          </button>
+          <div class="d-flex justify-content-between mt-2" style="gap: 8px;">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm flex-fill"
+              onclick="acceptEssentialCookies()"
+            >
+              Essential Only
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-info btn-sm flex-fill"
+              onclick="openCookieModal()"
+            >
+              <i class="bi bi-sliders mr-1"></i> Preferences
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= COOKIE PREFERENCES MODAL ================= -->
+    <div
+      class="modal fade"
+      id="cookieSettingsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="cookieModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content cookie-modal-content">
+          <div class="modal-header cookie-modal-header">
+            <div class="d-flex align-items-center">
+              <div class="cookie-modal-icon mr-3">
+                <i class="bi bi-cookie"></i>
+              </div>
+              <div>
+                <h5 class="modal-title font-weight-bold mb-0" id="cookieModalLabel">Cookie &amp; Privacy Preferences</h5>
+                <small class="text-white-50">Manage how cookies are used on Orbiko Store</small>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="close text-white"
+              data-dismiss="modal"
+              aria-label="Close"
+              style="opacity: 0.9;"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-4">
+            <p class="text-secondary small mb-4">
+              When you browse Orbiko, cookies are stored on your device to ensure smooth shopping, save cart items across page reloads, and deliver tailored discounts. You can customize your cookie permissions below:
+            </p>
+
+            <div class="cookie-options-list">
+              <!-- Strictly Necessary -->
+              <div class="cookie-option-card">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-shield-check text-primary mr-2" style="font-size: 1.25rem;"></i>
+                    <strong class="text-dark">Strictly Necessary Cookies</strong>
+                  </div>
+                  <span class="badge badge-success px-2 py-1">Always Active</span>
+                </div>
+                <p class="text-muted small mb-0">
+                  Required for essential store features: persistent shopping cart (<code>orbiko_cart_items</code>), secure checkout, and user session state. These cookies cannot be switched off.
+                </p>
+              </div>
+
+              <!-- Functional & Preferences -->
+              <div class="cookie-option-card">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-gear-wide-connected text-info mr-2" style="font-size: 1.25rem;"></i>
+                    <strong class="text-dark">Functional &amp; Preferences</strong>
+                  </div>
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="cookieFunctionalToggle" checked />
+                    <label class="custom-control-label" for="cookieFunctionalToggle"></label>
+                  </div>
+                </div>
+                <p class="text-muted small mb-0">
+                  Remembers your category selections, carousel speed, and custom viewing settings between visits.
+                </p>
+              </div>
+
+              <!-- Analytics & Performance -->
+              <div class="cookie-option-card">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-graph-up-arrow text-warning mr-2" style="font-size: 1.25rem;"></i>
+                    <strong class="text-dark">Analytics &amp; Performance</strong>
+                  </div>
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="cookieAnalyticsToggle" checked />
+                    <label class="custom-control-label" for="cookieAnalyticsToggle"></label>
+                  </div>
+                </div>
+                <p class="text-muted small mb-0">
+                  Helps us analyze visitor volume, popular categories, and optimize store loading speed.
+                </p>
+              </div>
+
+              <!-- Marketing & Promotions -->
+              <div class="cookie-option-card">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div class="d-flex align-items-center">
+                    <i class="bi bi-megaphone text-danger mr-2" style="font-size: 1.25rem;"></i>
+                    <strong class="text-dark">Marketing &amp; Personalization</strong>
+                  </div>
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="cookieMarketingToggle" />
+                    <label class="custom-control-label" for="cookieMarketingToggle"></label>
+                  </div>
+                </div>
+                <p class="text-muted small mb-0">
+                  Enables personalized promotional banners, flash sale notifications, and relevant product recommendations.
+                </p>
+              </div>
+            </div>
+
+            <!-- Active Stored Cookies Inspector -->
+            <div class="mt-4 pt-3 border-top">
+              <a
+                class="btn btn-link btn-sm text-decoration-none p-0 text-muted d-flex align-items-center"
+                data-toggle="collapse"
+                href="#storedCookiesAccordion"
+                role="button"
+                aria-expanded="false"
+              >
+                <i class="bi bi-terminal mr-1 text-primary"></i>
+                <span class="font-weight-bold">Inspect Active Browser Cookies</span>
+                <i class="bi bi-chevron-down ml-auto"></i>
+              </a>
+              <div class="collapse mt-2" id="storedCookiesAccordion">
+                <div class="card card-body bg-light p-3" style="font-size: 12px; border-radius: 8px;">
+                  <div id="activeCookiesList" class="text-monospace">Scanning active cookies...</div>
+                  <div class="mt-2 text-right">
+                    <button class="btn btn-outline-danger btn-sm py-1 px-2" style="font-size: 11px;" onclick="clearAllOrbikoCookies()">
+                      <i class="bi bi-trash mr-1"></i> Clear All Orbiko Cookies
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer bg-light d-flex justify-content-between">
+            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="acceptEssentialCookies()">
+              Essential Only
+            </button>
+            <div>
+              <button type="button" class="btn btn-primary btn-sm px-3 mr-2" onclick="saveCookiePreferences()">
+                <i class="bi bi-save mr-1"></i> Save Preferences
+              </button>
+              <button type="button" class="btn btn-success btn-sm px-3 font-weight-bold" onclick="acceptAllCookies()">
+                <i class="bi bi-check2-all mr-1"></i> Accept All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= COOKIE TOAST NOTIFICATION ================= -->
+    <div id="cookieToast" class="cookie-toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <i class="bi bi-check-circle-fill text-success" style="font-size: 18px;"></i>
+      <span id="cookieToastMsg">Cookie preferences saved successfully!</span>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS (Separated) -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

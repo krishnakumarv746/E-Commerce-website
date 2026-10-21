@@ -1,0 +1,508 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "HOME APPLIANCES",
+      "navName": "APPLIANCES",
+      "titleColor": "#0d47a1",
+      "banner": "images/ac.jpg",
+      "products": [
+        {
+          "id": 101,
+          "name": "Double Door Refrigerator (French Door)",
+          "category": "Appliances",
+          "image": "images/a (4).jpg",
+          "price": 28990,
+          "originalPrice": 39990,
+          "discount": "28% off"
+        },
+        {
+          "id": 102,
+          "name": "55-Inch 4K Ultra HD Smart LED TV",
+          "category": "Appliances",
+          "image": "images/a (3).jpg",
+          "price": 32499,
+          "originalPrice": 49990,
+          "discount": "35% off"
+        },
+        {
+          "id": 103,
+          "name": "1.5 Ton 5-Star Split Inverter AC",
+          "category": "Appliances",
+          "image": "images/ac.jpg",
+          "price": 34990,
+          "originalPrice": 48000,
+          "discount": "27% off"
+        },
+        {
+          "id": 104,
+          "name": "28L Convection Microwave Oven",
+          "category": "Appliances",
+          "image": "images/a (5).jpg",
+          "price": 11490,
+          "originalPrice": 16990,
+          "discount": "32% off"
+        },
+        {
+          "id": 105,
+          "name": "Canister Vacuum Cleaner (1900W)",
+          "category": "Appliances",
+          "image": "images/a (2).jpg",
+          "price": 4999,
+          "originalPrice": 7999,
+          "discount": "38% off"
+        },
+        {
+          "id": 106,
+          "name": "High-Speed Oscillating Table Fan",
+          "category": "Appliances",
+          "image": "images/a (6).jpg",
+          "price": 1899,
+          "originalPrice": 2899,
+          "discount": "34% off"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "MEN'S WEAR",
+      "navName": "MEN'S WEAR",
+      "titleColor": "#b71c1c",
+      "banner": "images/f (3).jpg",
+      "products": [
+        {
+          "id": 201,
+          "name": "Men's Formal Leather Shoes (Black)",
+          "category": "Footwear",
+          "image": "images/f (1).jpg",
+          "price": 1799,
+          "originalPrice": 3499,
+          "discount": "49% off"
+        },
+        {
+          "id": 202,
+          "name": "Nike Men's Free Run Sports Shoes (Red)",
+          "category": "Footwear",
+          "image": "images/f (2).jpg",
+          "price": 4295,
+          "originalPrice": 7995,
+          "discount": "46% off"
+        },
+        {
+          "id": 203,
+          "name": "Men's Navy Blue Casual Linen Shirt",
+          "category": "Fashion",
+          "image": "images/f (3).jpg",
+          "price": 799,
+          "originalPrice": 1599,
+          "discount": "50% off"
+        },
+        {
+          "id": 204,
+          "name": "Men's Cotton Plain T-Shirt (Beige)",
+          "category": "Fashion",
+          "image": "images/f (4).jpg",
+          "price": 449,
+          "originalPrice": 999,
+          "discount": "55% off"
+        },
+        {
+          "id": 205,
+          "name": "Formal Shirts & Ties Combo Pack (Set of 4)",
+          "category": "Fashion",
+          "image": "images/f (5).jpg",
+          "price": 2499,
+          "originalPrice": 4999,
+          "discount": "50% off"
+        },
+        {
+          "id": 206,
+          "name": "Men's Slim Fit Formal Trousers (Black)",
+          "category": "Fashion",
+          "image": "images/f (6).jpg",
+          "price": 899,
+          "originalPrice": 1899,
+          "discount": "53% off"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "WOMEN'S WEAR",
+      "navName": "WOMEN'S WEAR",
+      "titleColor": "#880e4f",
+      "banner": "images/w (6).png",
+      "products": [
+        {
+          "id": 301,
+          "name": "Women's Designer Shoulder Tote Handbag",
+          "category": "Fashion",
+          "image": "images/w (1).jpg",
+          "price": 1299,
+          "originalPrice": 2699,
+          "discount": "52% off"
+        },
+        {
+          "id": 302,
+          "name": "Women's Casual Slip-On Loafers (Navy Blue)",
+          "category": "Footwear",
+          "image": "images/w (2).jpg",
+          "price": 899,
+          "originalPrice": 1799,
+          "discount": "50% off"
+        },
+        {
+          "id": 303,
+          "name": "Kanjivaram Silk Zari Saree (Yellow & Blue)",
+          "category": "Ethnic Wear",
+          "image": "images/w (3).jpg",
+          "price": 2999,
+          "originalPrice": 6999,
+          "discount": "57% off"
+        },
+        {
+          "id": 304,
+          "name": "Women's Striped Casual Crop Shirt",
+          "category": "Fashion",
+          "image": "images/w (4).jpg",
+          "price": 599,
+          "originalPrice": 1299,
+          "discount": "54% off"
+        },
+        {
+          "id": 305,
+          "name": "Women's High-Rise Straight Fit Denim Jeans",
+          "category": "Fashion",
+          "image": "images/w (5).png",
+          "price": 1199,
+          "originalPrice": 2499,
+          "discount": "52% off"
+        },
+        {
+          "id": 306,
+          "name": "Designer Georgette Embroidered Party Saree",
+          "category": "Ethnic Wear",
+          "image": "images/w (6).png",
+          "price": 2499,
+          "originalPrice": 5499,
+          "discount": "55% off"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "ELECTRONICS & GADGETS",
+      "navName": "ELECTRONICS",
+      "titleColor": "#00695c",
+      "banner": "images/e (2).jpg",
+      "products": [
+        {
+          "id": 401,
+          "name": "Apple iPhone 15 (128GB, White)",
+          "category": "Electronics",
+          "image": "images/e (1).jpg",
+          "price": 65999,
+          "originalPrice": 79900,
+          "discount": "17% off"
+        },
+        {
+          "id": 402,
+          "name": "5.1 Dolby Surround Soundbar with Subwoofer",
+          "category": "Electronics",
+          "image": "images/e (2).jpg",
+          "price": 8999,
+          "originalPrice": 15999,
+          "discount": "44% off"
+        },
+        {
+          "id": 403,
+          "name": "Wireless Noise Cancelling Over-Ear Headphones",
+          "category": "Electronics",
+          "image": "images/e (3).jpg",
+          "price": 3499,
+          "originalPrice": 6999,
+          "discount": "50% off"
+        },
+        {
+          "id": 404,
+          "name": "Professional 24.2 MP DSLR Camera with Lens",
+          "category": "Electronics",
+          "image": "images/e (4).jpg",
+          "price": 42990,
+          "originalPrice": 54990,
+          "discount": "22% off"
+        },
+        {
+          "id": 405,
+          "name": "1.69-Inch Bluetooth Calling Smartwatch",
+          "category": "Electronics",
+          "image": "images/e (5).jpg",
+          "price": 1499,
+          "originalPrice": 3999,
+          "discount": "63% off"
+        },
+        {
+          "id": 406,
+          "name": "Apple AirPods Pro (2nd Gen) with MagSafe Case",
+          "category": "Electronics",
+          "image": "images/a (1).jpg",
+          "price": 18999,
+          "originalPrice": 24900,
+          "discount": "24% off"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "SPORTS & GAMES",
+      "navName": "SPORTS",
+      "titleColor": "#e65100",
+      "banner": "images/s (1).jpg",
+      "products": [
+        {
+          "id": 501,
+          "name": "Sony PlayStation 5 Console (Disc Edition + Game)",
+          "category": "Gaming",
+          "image": "images/s (1).jpg",
+          "price": 49990,
+          "originalPrice": 54990,
+          "discount": "9% off"
+        },
+        {
+          "id": 502,
+          "name": "Badminton Set (2 Rackets + Shuttlecock)",
+          "category": "Sports",
+          "image": "images/s (2).jpg",
+          "price": 699,
+          "originalPrice": 1299,
+          "discount": "46% off"
+        },
+        {
+          "id": 503,
+          "name": "Handcrafted Wooden Chess Board Set (32 Pieces)",
+          "category": "Board Games",
+          "image": "images/s (3).jpg",
+          "price": 1199,
+          "originalPrice": 2199,
+          "discount": "45% off"
+        },
+        {
+          "id": 504,
+          "name": "Tournament Carrom Board with Coins & Striker",
+          "category": "Board Games",
+          "image": "images/s (4).jpg",
+          "price": 1899,
+          "originalPrice": 3299,
+          "discount": "42% off"
+        },
+        {
+          "id": 505,
+          "name": "Full Cricket Kit (Kashmir Willow Bat & Stumps)",
+          "category": "Sports",
+          "image": "images/s (5).jpg",
+          "price": 2299,
+          "originalPrice": 4199,
+          "discount": "45% off"
+        },
+        {
+          "id": 506,
+          "name": "Professional Captain Size-5 Match Football",
+          "category": "Sports",
+          "image": "images/s (6).jpg",
+          "price": 599,
+          "originalPrice": 1199,
+          "discount": "50% off"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "HOME DECOR & FURNITURE",
+      "navName": "FURNITURE",
+      "titleColor": "#4e342e",
+      "banner": "images/h (5).jpg",
+      "products": [
+        {
+          "id": 601,
+          "name": "Antique Anchor Wooden Wall Clock",
+          "category": "Home Decor",
+          "image": "images/h (1).jpg",
+          "price": 1299,
+          "originalPrice": 2499,
+          "discount": "48% off"
+        },
+        {
+          "id": 602,
+          "name": "Ajanta Living Room Minimalist Wall Clock",
+          "category": "Home Decor",
+          "image": "images/h (2).jpg",
+          "price": 799,
+          "originalPrice": 1499,
+          "discount": "47% off"
+        },
+        {
+          "id": 603,
+          "name": "Nordic Ceramic Flower Vases (Set of 3)",
+          "category": "Home Decor",
+          "image": "images/h (3).jpg",
+          "price": 999,
+          "originalPrice": 1899,
+          "discount": "47% off"
+        },
+        {
+          "id": 604,
+          "name": "Ergonomic Office Table with Mesh Chair Set",
+          "category": "Furniture",
+          "image": "images/h (4).jpg",
+          "price": 7499,
+          "originalPrice": 12999,
+          "discount": "42% off"
+        },
+        {
+          "id": 605,
+          "name": "Luxury 5-Seater Living Room Sofa with Coffee Table",
+          "category": "Furniture",
+          "image": "images/h (5).jpg",
+          "price": 34999,
+          "originalPrice": 52000,
+          "discount": "33% off"
+        },
+        {
+          "id": 606,
+          "name": "Traditional Printed Living Room Floor Rug Carpet",
+          "category": "Home Decor",
+          "image": "images/h(6).jpg",
+          "price": 1499,
+          "originalPrice": 2999,
+          "discount": "50% off"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "BOOKS & BESTSELLERS",
+      "navName": "BOOKS",
+      "titleColor": "#6a1b9a",
+      "banner": "images/b1.jpg",
+      "products": [
+        {
+          "id": 701,
+          "name": "The Psychology of Money",
+          "category": "Finance & Wealth",
+          "image": "images/b1.jpg",
+          "price": 299,
+          "originalPrice": 499,
+          "discount": "40% off"
+        },
+        {
+          "id": 702,
+          "name": "The ONE Thing",
+          "category": "Productivity",
+          "image": "images/b2.jpg",
+          "price": 349,
+          "originalPrice": 550,
+          "discount": "36% off"
+        },
+        {
+          "id": 703,
+          "name": "Letting Go: The Pathway of Surrender",
+          "category": "Mindfulness",
+          "image": "images/b3.jpg",
+          "price": 399,
+          "originalPrice": 650,
+          "discount": "38% off"
+        },
+        {
+          "id": 704,
+          "name": "Atomic Habits (James Clear)",
+          "category": "Self Growth",
+          "image": "images/b4.jpg",
+          "price": 449,
+          "originalPrice": 799,
+          "discount": "44% off"
+        },
+        {
+          "id": 705,
+          "name": "The Art of Being Alone",
+          "category": "Mental Health",
+          "image": "images/b5.jpg",
+          "price": 279,
+          "originalPrice": 450,
+          "discount": "38% off"
+        },
+        {
+          "id": 706,
+          "name": "Master Your Emotions",
+          "category": "Emotional Mastery",
+          "image": "images/b6.png",
+          "price": 289,
+          "originalPrice": 499,
+          "discount": "42% off"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "DELICIOUS FOOD & SNACKS",
+      "navName": "FOOD",
+      "titleColor": "#d84315",
+      "banner": "images/food1.jpg",
+      "products": [
+        {
+          "id": 801,
+          "name": "Special Hyderabadi Dum Chicken Biryani",
+          "category": "Biryani & Rice",
+          "image": "images/food1.jpg",
+          "price": 299,
+          "originalPrice": 420,
+          "discount": "29% off"
+        },
+        {
+          "id": 802,
+          "name": "Crispy Hot Poori with Aloo Masala Bhaji",
+          "category": "Breakfast",
+          "image": "images/food2.jpg",
+          "price": 119,
+          "originalPrice": 170,
+          "discount": "30% off"
+        },
+        {
+          "id": 803,
+          "name": "Crispy Golgappe / Pani Puri Platter (8 Pcs)",
+          "category": "Street Food",
+          "image": "images/food3.png",
+          "price": 89,
+          "originalPrice": 130,
+          "discount": "32% off"
+        },
+        {
+          "id": 804,
+          "name": "Royal North Indian Deluxe Thali Special",
+          "category": "North Indian",
+          "image": "images/food4.jpg",
+          "price": 249,
+          "originalPrice": 350,
+          "discount": "29% off"
+        },
+        {
+          "id": 805,
+          "name": "Soft Steamed Idli Platter with Sambar & Chutney",
+          "category": "South Indian",
+          "image": "images/food5.jpg",
+          "price": 109,
+          "originalPrice": 150,
+          "discount": "27% off"
+        },
+        {
+          "id": 806,
+          "name": "Crispy Masala Dosa with Sambar & Chutneys",
+          "category": "South Indian",
+          "image": "images/food6.jpg",
+          "price": 139,
+          "originalPrice": 199,
+          "discount": "30% off"
+        }
+      ]
+    }
+  ]
+}
